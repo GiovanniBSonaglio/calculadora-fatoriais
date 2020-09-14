@@ -2,20 +2,20 @@ import React from 'react';
 
 const FormFatorial = (props) => {
   return (
-    <div id="form-fatorial" class="form-inline justify-content-center">
-      <form onSubmit={props.handleFormSubmit}>
-        <div class="form-group mb-2">
+    <div id="form-fatorial">
+      <form onSubmit={props.handleFormSubmit} className="form-inline justify-content-center">
+        <div className="form-group mb-2">
           <label htmlFor="valor">Número: </label>
           <input
             id="valor"
             value={props.valor}
             type="text"
             name="valor"
-            class="form-control"
+            className="form-control"
             onChange={props.handleInputChange}
           />
-          <button type="submit" class="btn btn-primary"> Calcular </button>
         </div>
+        <button type="submit" className="btn btn-primary"> Calcular </button>
       </form>
     </div>
   );

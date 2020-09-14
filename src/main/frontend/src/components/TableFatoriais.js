@@ -3,7 +3,7 @@ import HistoricoFatoriais from './HistoricoFatoriais';
 
 const TableFatoriais = () => {
     return(
-        <table class="table">
+        <table className="table">
             <tbody>
                 <tr>
                     <th scope="col">#</th>

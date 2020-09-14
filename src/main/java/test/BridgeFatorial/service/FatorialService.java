@@ -42,8 +42,9 @@ public class FatorialService {
 
     static String buildString(int res[], int res_size)
     {   
+        StringBuilder sb = new StringBuilder(12);
+
         if(res_size <= 9){
-            StringBuilder sb = new StringBuilder(res.length);
             for (int i = res_size - 1; i >= 0; i--){
                 
                 if( (i + 1) % 3 == 0 && (i + 1) < res_size){
@@ -52,20 +53,19 @@ public class FatorialService {
 
                 sb.append(res[i]);
             }
-            return sb.toString();
         }else{
-            StringBuilder sb = new StringBuilder(7);
-            for (int i = res_size - 1; i >= res_size - 4; i--){
+            for (int i = res_size - 1; i >= res_size - 10; i--){
                 sb.append(res[i]);
 
                 if(i == res_size - 1){
-                    sb.append('.');
+                    sb.append(',');
                 }
             }
-            sb.append('E');
-            sb.append(res_size);
-            return sb.toString();
+
+            sb.append(" E+"+(res_size-1));
         }
+
+        return sb.toString();
     }
       
     static int multiply(int x, int res[], int res_size) 

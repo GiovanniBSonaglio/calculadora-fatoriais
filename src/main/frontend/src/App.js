@@ -14,7 +14,7 @@ function App() {
         valor: inputFatorialState.valor,
     })
     .then(res => {
-      setInputFatorialState(res.data);
+      //setInputFatorialState(res.data);
     });
   };
 
@@ -30,14 +30,14 @@ function App() {
 
   return (
     <div className="App">
-      <div class="container expand-container">
-        <div class="col-12 col-sm-10 col-8 d-flex justify-content-center">
-          <div class="row justify-content-center">
-            <div class="col-12">
-              <div class="title text-center"> Calculadora de Fatoriais </div>
-              <div class="text"> 
+      <div className="container">
+        <div className="col-12 col-sm-10 col-8">
+          <div className="row justify-content-center">
+            <div className="col-12">
+              <div className="title text-center"> Calculadora de Fatoriais </div>
+              <div className="text"> 
                 Insira um número abaixo para calcular seu fatorial. Se o resultado tiver mais do que 9 digitos, utilizaremos a notação exponencial. Abaixo do formulário há uma tabela com o histórico de fatoriais calculados, ordenados do mais novo para o mais antigo. 
-                <div class="limitacoes">
+                <div className="limitacoes">
                   Limitações:
                   <ul>
                     <li> Não é possível calcular fatoriais de números negativos; </li>
@@ -47,20 +47,20 @@ function App() {
                 </div>
               </div>
             </div>
-            <div class="col-12">
-              <div class="formula">
+            <div className="col-12">
+              <div className="formula">
                 Fórmula: <br></br>
-                <img src="/images/formula.svg"></img>
+                <img src="/images/formula.svg" alt="Fórmula para cálculo de um fatorial" title="Fórmula para cálculo de um fatorial"></img>
               </div>
             </div>
-            <div class="col-12">
+            <div className="col-12">
               <FormFatorial
                 handleFormSubmit={handleFormSubmit}
                 handleInputChange={handleInputChange}
                 numero={inputFatorialState.valor}
                 />
             </div>
-            <div class="col-6 text-center">
+            <div className="col-12 col-md-6 text-center">
               <TableFatoriais items={inputFatorialState} />
             </div>
           </div>

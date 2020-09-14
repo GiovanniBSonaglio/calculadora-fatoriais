@@ -18,7 +18,7 @@ const HistoricoFatoriais = () => {
   return fatoriaisState.slice(0).reverse().map((fatorialState, index) => {
     return (
       <tr key={index}>
-        <td scope="row">{index+1}</td>
+        <td>{index+1}</td>
         <td>{fatorialState.valor}</td>
         <td>{fatorialState.resultado}</td>
       </tr>
