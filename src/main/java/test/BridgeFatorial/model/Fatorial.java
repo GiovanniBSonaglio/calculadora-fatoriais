@@ -4,14 +4,23 @@ import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import org.springframework.lang.NonNull;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Null;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Max;
 
 public class Fatorial {
-    @NonNull
+    @Null
     private final UUID id_fatorial;
-    @NonNull
+
+    @NotNull(message="Número não pode ser nulo.")
+    @Min(value = 0L, message = "O valor deve ser positivo.")
+    @Max(value = 807L, message = "O valor não pode ser maior que 807.")
+    @Digits(integer = 3, fraction = 0, message = "Só é permitido 3 digitos para o número.")
     private final Integer valor;
-    @NonNull
+
+    @Null
     private final String resultado;
 
     public Fatorial(@JsonProperty("id_fatorial") UUID id_fatorial, 

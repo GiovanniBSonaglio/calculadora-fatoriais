@@ -10,11 +10,22 @@ function App() {
   const [inputFatorialState, setInputFatorialState] = useState([]);
 
   const handleFormSubmit = (event) => {
+    event.preventDefault();
     axios.post("http://localhost:8080/api/fatorial", {
         valor: inputFatorialState.valor,
+        validateStatus: () => true
     })
     .then(res => {
-      //setInputFatorialState(res.data);
+      //render(element, document.getElementById('App'));
+    })
+    .catch((error) => {
+      if (error.response) {
+        console.log(error.response.data.errors[0].defaultMessage);
+      } else if (error.request) {
+        console.log(error.request);
+      } else {
+        console.log('Error', error.message);
+      }
     });
   };
 
