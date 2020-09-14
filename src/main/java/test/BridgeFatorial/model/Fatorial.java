@@ -12,11 +12,11 @@ public class Fatorial {
     @NonNull
     private final Integer valor;
     @NonNull
-    private final Long resultado;
+    private final String resultado;
 
     public Fatorial(@JsonProperty("id_fatorial") UUID id_fatorial, 
                     @JsonProperty("valor") Integer valor, 
-                    @JsonProperty("resultado") Long resultado) {
+                    @JsonProperty("resultado") String resultado) {
         this.id_fatorial = id_fatorial;
         this.valor = valor;
         this.resultado = resultado;
@@ -30,7 +30,7 @@ public class Fatorial {
         return valor;
     }
 
-    public Long getResultado() {
+    public String getResultado() {
         return resultado;
     }
 }

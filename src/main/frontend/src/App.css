@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.title {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.limitacoes {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.limitacoes {
+    font-weight: 700;
+}
+
+.limitacoes li {
+    font-weight: 400;
+}
+
+.formula {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.formula img {
+    object-fit: contain;
+}
+
+#form-fatorial label {
+    margin-right: 10px;
+}
+
+#form-fatorial input {
+    margin-right: 10px;
+}

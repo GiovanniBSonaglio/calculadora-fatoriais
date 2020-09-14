@@ -14,9 +14,10 @@ public class FakeFatorialDataAccessService implements FatorialDao {
     private static List<Fatorial> DB = new ArrayList<>();
 
     @Override
-    public int insertFatorial(UUID id_fatorial, Fatorial fatorial, Long resultado) {
-        DB.add(new Fatorial(id_fatorial, fatorial.getValor(), resultado));
-        return 1;
+    public Fatorial insertFatorial(UUID id_fatorial, Fatorial fatorial, String resultado) {
+        Fatorial created_fatorial = new Fatorial(id_fatorial, fatorial.getValor(), resultado);
+        DB.add(created_fatorial);
+        return created_fatorial;
     }
 
     @Override

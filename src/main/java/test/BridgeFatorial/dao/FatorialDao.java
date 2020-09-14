@@ -7,9 +7,9 @@ import java.util.UUID;
 
 public interface FatorialDao {
 
-    int insertFatorial(UUID id, Fatorial fatorial, Long resultado);
+    Fatorial insertFatorial(UUID id, Fatorial fatorial, String resultado);
 
-    default int insertFatorial(Fatorial fatorial, Long resultado) {
+    default Fatorial insertFatorial(Fatorial fatorial, String resultado) {
         UUID id = UUID.randomUUID();
         return insertFatorial(id, fatorial, resultado);
     }
