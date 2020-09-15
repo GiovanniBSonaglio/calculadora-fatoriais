@@ -19,7 +19,11 @@ Para executar o projeto é necessário:
   * [Maven 3.2+](https://maven.apache.org/download.cgi)
   * Como alternativa: A maioria das IDEs possuem extensões para compilarem o springboot.
 
-Para inicializar o React, é necessário navegar para [src/main/frontend](test_dir) e executar o comando:
+Para inicializar o React, é necessário navegar para [src/main/frontend](test_dir) e executar os comandos:
+
+```bash
+npm install
+```
 
 ```bash
 npm start
