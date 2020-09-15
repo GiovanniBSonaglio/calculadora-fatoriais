@@ -27,6 +27,13 @@ public class FatorialService {
         return fatorialDao.selectAllFatoriais();
     }
 
+    /**
+     * Função para calcular o fatorial
+     * 
+     * @param n int Número que terá seu fatorial calculado
+     * 
+     * @return String
+     */
     static String calculateFactorial(int n) 
     { 
         int res[] = new int[2000]; 
@@ -40,6 +47,14 @@ public class FatorialService {
        return buildString(res, res_size);
     } 
 
+    /**
+     * Função para construir a string do resultado do fatorial
+     * 
+     * @param res[]     int Array de ints com os digitos armazenados
+     * @param res_size  int Tamanho da resposta
+     * 
+     * @return res_size String
+     */
     static String buildString(int res[], int res_size)
     {   
         StringBuilder sb = new StringBuilder(12);
@@ -68,6 +83,15 @@ public class FatorialService {
         return sb.toString();
     }
       
+    /**
+     * Função para multiplicar um número e armazenar cada algarismo em um item do array
+     * 
+     * @param x         int 
+     * @param res[]     int Array de ints onde será armazenado o resultado
+     * @param res_size  int Tamanho da resposta
+     * 
+     * @return res_size int
+     */
     static int multiply(int x, int res[], int res_size) 
     { 
         int carry = 0;
