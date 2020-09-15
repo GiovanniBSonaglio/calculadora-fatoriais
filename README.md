@@ -38,11 +38,9 @@ Com isso será possível consumir a API pela porta 8080 do localhost: [http:/loc
 * Para consultar o histórico dos fatoriais envie um GET request para: [http://localhost:8080/api/fatorial](http://localhost:8080/api/fatorial)
 
 * Para obter o resultado de um fatorial envie um POST request para: [http://localhost:8080/api/fatorial](http://localhost:8080/api/fatorial); 
-Com o parâmetro "valor" em json:
-```json
-{
-   valor: valor_para_calcular
-}
+Com o parâmetro "valor" em json, como o exemplo:
+```javascript
+{ "valor": 5 }
 ```
 
 ## Limitações
