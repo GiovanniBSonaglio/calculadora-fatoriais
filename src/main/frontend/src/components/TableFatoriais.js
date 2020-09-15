@@ -4,7 +4,7 @@ import HistoricoFatoriais from './HistoricoFatoriais';
 /** 
  * Tabela com o histórico dos fatoriais
  * 
- * @param props State com o resultado do get da api que será repassado para o HistoricoFatoriais
+ * @param props historicoFatoriaisState que será repassado para o HistoricoFatoriais
  * @return HTML resultante
  * 
  */

@@ -17,7 +17,9 @@ function App() {
   const [historicoFatoriaisState,setHistoricoFatoriaisState] = useState()
 
   /**
-   * Busca o historico de fatorias utilizando a API e armazena no historicoFatoriaisState
+   * Busca o historico de fatorias utilizando a API e 
+   * armazena no historicoFatoriaisState
+   * 
    * @url http://localhost:8080/api/fatorial
    * @async 
    * 
@@ -50,7 +52,10 @@ function App() {
   const [inputFatorialState, setInputFatorialState] = useState([]);
 
   /**
+   * Envia o input com o número para a API retornar o 
+   * fatorial e anexa ao state de historico
    * 
+   * @async
    * @param event 
    */
   const handleFormSubmit = (event) => {
@@ -77,8 +82,9 @@ function App() {
   };
 
   /**
+   * Seta o estado de input quando vê mudanças nele
    * 
-   * @param e 
+   * @param event
    */
   const handleInputChange = (event) => {
     let input = event.target;
