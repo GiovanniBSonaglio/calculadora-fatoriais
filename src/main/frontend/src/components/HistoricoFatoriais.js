@@ -10,10 +10,10 @@ import React from 'react';
 const HistoricoFatoriais = (props) => {
   let fatoriais = props.props;
 
-  if(fatoriais.props !== undefined){
+  if(fatoriais !== undefined){
     // Vamos usar um map para gerar cada linha a partir do array de items do state
-    return fatoriais.props.items.map((fatorialState, index) => {
-      let id = fatoriais.props.items.length-(index);
+    return fatoriais.items.map((fatorialState, index) => {
+      let id = fatoriais.items.length-(index);
       return (
         <tr key={id}>
           <td>{id}</td>

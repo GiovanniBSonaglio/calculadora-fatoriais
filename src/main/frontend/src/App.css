@@ -37,6 +37,7 @@ body {
 }
 
 .formula img {
+    max-width: 100%;
     object-fit: contain;
 }
 
@@ -46,6 +47,15 @@ body {
 
 #form-fatorial input {
     margin-right: 10px;
+}
+
+.resultado {
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin: 20px 0px;
+    text-align: center;
 }
 
 /*** Mobile ***/
@@ -61,5 +71,6 @@ body {
 
     #form-fatorial .btn {
         margin-bottom: 20px;
+        margin-top: 15px;
     }
 }

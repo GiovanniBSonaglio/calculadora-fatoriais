@@ -1,5 +1,12 @@
 import React from 'react';
 
+/** 
+ * Form para inserção do número a ser calculado
+ * 
+ * @param props funções e valores necessários para o funcionamento do form
+ * @return HTML resultante
+ * 
+ */
 const FormFatorial = (props) => {
   return (
     <div id="form-fatorial">
@@ -14,8 +21,8 @@ const FormFatorial = (props) => {
             className="form-control"
             onChange={props.handleInputChange}
           />
+          <button type="submit" className="btn btn-primary"> Calcular </button>
         </div>
-        <button type="submit" className="btn btn-primary"> Calcular </button>
       </form>
     </div>
   );

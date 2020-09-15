@@ -48,7 +48,7 @@ Com o parâmetro "valor" em json, como o exemplo:
 * Não é possível calcular fatoriais de números não inteiros;
 * Por uma escolha arbitrária, o maior n possível de ser calculado é 807, pois o resultado é armazenado num array de ints que pode manter até 2000 dígitos (é possível aumentar a alocação da memória).
 
-  Tanto o backend quanto o frontend realizam as devidas validações para  impedir cálculos de números que não seguem as limitações.
+  A API realiza as devidas validações para impedir cálculos de números que não seguem as limitações.
 
 ## Contato
 Giovanni Bertotti Sonaglio - giovannibsonaglio@gmail.com

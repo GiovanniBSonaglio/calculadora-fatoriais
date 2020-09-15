@@ -17,7 +17,7 @@ const TableFatoriais = (props) => {
                     <th scope="col">Valor</th>
                     <th scope="col">Resultado</th>
                 </tr>
-                <HistoricoFatoriais props={props}/>
+                <HistoricoFatoriais props={props.props}/>
             </tbody>
         </table>
     )
