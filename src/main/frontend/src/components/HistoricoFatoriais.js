@@ -1,29 +1,33 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 
-const HistoricoFatoriais = () => {
-  const [fatoriaisState, setFatorialState] = useState([]);
+/** 
+ * Linhas da tabela de historico de fatoriais
+ * 
+ * @param props State com o resultado do get da api
+ * @return HTML resultante
+ * 
+ */
+const HistoricoFatoriais = (props) => {
+  let fatoriais = props.props;
 
-  const fetchHistoricoFatoriais = () => {
-    axios.get("http://localhost:8080/api/fatorial").then((res) => {
-      setFatorialState(res.data);
+  if(fatoriais.props !== undefined){
+    // Vamos usar um map para gerar cada linha a partir do array de items do state
+    return fatoriais.props.items.map((fatorialState, index) => {
+      let id = fatoriais.props.items.length-(index);
+      return (
+        <tr key={id}>
+          <td>{id}</td>
+          <td>{fatorialState.valor}</td>
+          <td>{fatorialState.resultado}</td>
+        </tr>
+      );
     });
-  };
-
-  useEffect(() => {
-    fetchHistoricoFatoriais();
-  }, []);
-  
-
-  return fatoriaisState.slice(0).reverse().map((fatorialState, index) => {
+  }else{
+    // Não puxou nada da API (mock db ainda vazio)
     return (
-      <tr key={index}>
-        <td>{index+1}</td>
-        <td>{fatorialState.valor}</td>
-        <td>{fatorialState.resultado}</td>
-      </tr>
+      <tr></tr>
     );
-  });
+  }
 };
 
 export default HistoricoFatoriais

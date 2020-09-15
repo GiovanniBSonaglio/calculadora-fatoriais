@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -6,17 +6,64 @@ import './App.css';
 import TableFatoriais from './components/TableFatoriais';
 import FormFatorial from './components/FormFatorial';
 
+/** 
+ * App principal
+ * 
+ * @return HTML resultante da página
+ * 
+ */
 function App() {
+  // State para armazenamento do historico de fatoriais calculados
+  const [historicoFatoriaisState,setHistoricoFatoriaisState] = useState()
+
+  /**
+   * Busca o historico de fatorias utilizando a API e armazena no historicoFatoriaisState
+   * @url http://localhost:8080/api/fatorial
+   * @async 
+   * 
+   */
+  const fetchHistoricoFatoriais = () => {
+    axios.get("http://localhost:8080/api/fatorial", {
+      validateStatus: () => true
+    }).then((res) => {
+      setHistoricoFatoriaisState({items: res.data});
+    })
+    .catch(function (error) {
+      if (error.request) {
+        // The request was made but no response was received
+        console.log(error.request);
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        console.log('Error', error.message);
+      }
+    });
+  };
+
+  /**
+   * Effects
+   */
+  useEffect(() => {
+    fetchHistoricoFatoriais();
+  }, []);
+
+  // State para armazenamento do input
   const [inputFatorialState, setInputFatorialState] = useState([]);
 
+  /**
+   * 
+   * @param event 
+   */
   const handleFormSubmit = (event) => {
     event.preventDefault();
+
     axios.post("http://localhost:8080/api/fatorial", {
         valor: inputFatorialState.valor,
         validateStatus: () => true
     })
     .then(res => {
-      //render(element, document.getElementById('App'));
+      setHistoricoFatoriaisState(prevState => ({
+        items: [res.data, ...prevState.items]
+      }))
     })
     .catch((error) => {
       if (error.response) {
@@ -24,14 +71,18 @@ function App() {
       } else if (error.request) {
         console.log(error.request);
       } else {
-        console.log('Error', error.message);
+        console.log(error);
       }
     });
   };
 
-  const handleInputChange = (e) => {
-    let input = e.target;
-    let name = e.target.name;
+  /**
+   * 
+   * @param e 
+   */
+  const handleInputChange = (event) => {
+    let input = event.target;
+    let name = event.target.name;
     let value = input.value;
 
     setInputFatorialState({
@@ -72,7 +123,7 @@ function App() {
                 />
             </div>
             <div className="col-12 col-md-6 text-center">
-              <TableFatoriais items={inputFatorialState} />
+              <TableFatoriais props={historicoFatoriaisState} />
             </div>
           </div>
         </div>
