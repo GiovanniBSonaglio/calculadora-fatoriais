@@ -121,11 +121,10 @@ function App() {
     let name = event.target.name;
     let value = input.value;
 
+    event.target.value = event.target.value.replace(/\D/,'')
     setInputFatorialState({
       [name]: value,
     });
-
-    event.target.value = event.target.value.replace(/\D/,'')
   };
 
   return (
