@@ -47,7 +47,7 @@ npm start
 ```
 Com isso será possível acessar a página web pela porta 3000 do localhost: [http:/localhost:3000](http:/localhost:3000)
 
-E para inicializar o spring boot: Em outro terminal execute o comando dentro do root do diretório:
+Para inicializar o spring boot, em outro terminal execute o comando dentro do root do diretório:
 ```bash
 mvn spring-boot:run
 ```
