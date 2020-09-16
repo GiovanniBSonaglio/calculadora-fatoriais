@@ -19,7 +19,7 @@ Para executar o projeto é necessário:
   * [Maven 3.2+](https://maven.apache.org/download.cgi)
   * Como alternativa: A maioria das IDEs possuem extensões para compilarem o springboot.
   
-1. Para instalar o react e suas dependências, navegue até a pasta [src/main/frontend](src/main/frontend) e execute:
+1. Para instalar o react e suas dependências instale primeiro o [npm](https://nodejs.org/en/) e então, navegue até a pasta [src/main/frontend](src/main/frontend) e execute:
     ```bash
     npm install
     ```
