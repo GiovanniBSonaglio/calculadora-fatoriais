@@ -24,18 +24,18 @@ Para executar o projeto é necessário:
     npm install
     ```
 2. Em seguida , instale o JDK
-    2.1. Linux:  
+    * Linux:  
     ```bash
     apt-get install default-jdk
     ```
-    2.2. Windows: Baixe o executável em https://www.oracle.com/java/technologies/javase-jdk15-downloads.html  
+    * Windows: Baixe o executável em https://www.oracle.com/java/technologies/javase-jdk15-downloads.html  
 
 3. Por último, instale Maven:
-    2.1. Linux:  
+    * Linux:  
     ```bash
     apt-get install maven
     ```
-    2.2. Windows: Baixe o ZIP em https://maven.apache.org/download.cgi  
+    * Windows: Baixe o ZIP em https://maven.apache.org/download.cgi  
 
 
 #### Inicializando
