@@ -19,6 +19,7 @@ const FormFatorial = (props) => {
             type="text"
             name="valor"
             className="form-control"
+            pattern="[0-9]*"
             onChange={props.handleInputChange}
           />
           <button type="submit" className="btn btn-primary"> Calcular </button>

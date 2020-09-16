@@ -8,9 +8,9 @@ import React from 'react';
  * 
  */
 const BlocoRetorno = (retornoAPIState) => {
-    if(retornoAPIState.props.status == 'none'){
+    if(retornoAPIState.props.status === 'none'){
         return null;
-    }else if(retornoAPIState.props.status == 'sucess'){
+    }else if(retornoAPIState.props.status === 'sucess'){
         return (
             <div className="resultado bg-primary text-white">
                 {retornoAPIState.props.valor}! = {retornoAPIState.props.resultado}

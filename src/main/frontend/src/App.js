@@ -124,6 +124,8 @@ function App() {
     setInputFatorialState({
       [name]: value,
     });
+
+    event.target.value = event.target.value.replace(/\D/,'')
   };
 
   return (
