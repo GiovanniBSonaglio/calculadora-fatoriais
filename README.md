@@ -15,9 +15,9 @@ Para executar o projeto é necessário:
 * [React](https://reactjs.org/)
   * [npm](https://www.npmjs.com/)
 * [Springboot](https://spring.io/)
+  * Recomendação: A maioria das IDEs (recomendo VSCode) possuem extensões para Maven e JDK, facilitando muito o processo de compilação do código.
   * [JDK 1.8](https://www.oracle.com/java/technologies/javase-downloads.html) ou acima
   * [Maven 3.2+](https://maven.apache.org/download.cgi)
-  * Como alternativa: A maioria das IDEs possuem extensões para compilarem o springboot.
   
 1. Para instalar o react e suas dependências instale primeiro o [npm](https://nodejs.org/en/) e então, navegue até a pasta [src/main/frontend](src/main/frontend) e execute:
     ```bash
